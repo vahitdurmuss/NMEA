@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.vahitdurmus.nmeaproject.MainActivity">
+
+
+    <TextView
+        android:id="@+id/textview_display"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/textview_display"
+        android:id="@+id/recylerview_location"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_marginBottom="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/fabadd"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_add_black_24dp"/>
+
+</RelativeLayout>

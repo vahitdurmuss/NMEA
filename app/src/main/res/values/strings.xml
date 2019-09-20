@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">nmeaProject</string>
+
+    <string name="latitude">Latitude:</string>
+    <string name="longitude">Longitude:</string>
+    <string name="quality">Quality:</string>
+    <string name="satellitesnumber">Number of Satellites in View:</string>
+    <string name="time">Time:</string>
+
+
+</resources>
