@@ -5,7 +5,31 @@
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorAccent">@color/red</item>
+    </style>
+
+    <style name="labelStyle">
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:background">@drawable/label_background</item>
+        <item name="android:textColor">#fff</item>
+        <item name="android:height">30dp</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+    <style name="labelStyle2">
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:textColor">#fff</item>
+        <item name="android:height">30dp</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="buttonStyle">
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:background">@drawable/button_background</item>
+        <item name="android:textColor">#fff</item>
+        <item name="android:textAlignment">center</item>
     </style>
 
 </resources>

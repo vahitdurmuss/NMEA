@@ -30,14 +30,11 @@ public class RecyleLocationAdapter extends RecyclerView.Adapter<RecyleLocationAd
         this.context=context;
         layoutInflater=LayoutInflater.from(context);
     }
-
-
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = layoutInflater.inflate(R.layout.layout_recylerrow, parent, false);
         return new ViewHolder(view);
     }
-
     @Override
     public void onBindViewHolder(ViewHolder holder, final int position) {
 
@@ -78,7 +75,6 @@ public class RecyleLocationAdapter extends RecyclerView.Adapter<RecyleLocationAd
     public int getItemCount() {
         return ggaList.size();
     }
-
     public   class  ViewHolder extends RecyclerView.ViewHolder{
 
         TextView latitudeText;

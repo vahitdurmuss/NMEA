@@ -34,7 +34,6 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
     List<GGA> ggaList;
     LinearLayoutManager linearLayoutManager;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,9 +53,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 try {
-
                     recyleLocationAdapter.addNLocation(locationTrack.get$GGA());
                 }
                 catch (Exception e){
@@ -73,7 +70,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
            displayTextView.setText(locationTrack.get$GGA().toString());
        }
        catch (NullPointerException e){
-
+            e.printStackTrace();
        }
     }
 
