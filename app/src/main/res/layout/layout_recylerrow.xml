@@ -16,11 +16,11 @@
           android:layout_height="wrap_content">
 
           <LinearLayout
-              android:background="@color/wallet_highlighted_text_holo_light"
               android:id="@+id/linearlayout_location"
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
               android:orientation="vertical">
+
               <RelativeLayout
                   android:layout_width="match_parent"
                   android:layout_height="wrap_content">
@@ -37,6 +37,7 @@
                       android:layout_width="wrap_content"
                       android:layout_height="wrap_content" />
               </RelativeLayout>
+
               <RelativeLayout
                   android:layout_width="match_parent"
                   android:layout_height="wrap_content">
@@ -71,6 +72,26 @@
                       android:layout_width="wrap_content"
                       android:layout_height="wrap_content" />
               </RelativeLayout>
+
+              <RelativeLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content">
+
+                  <TextView
+                      style="@style/labelStyle"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_alignParentLeft="true"
+                      android:text="@string/time" />
+
+                  <TextView
+                      android:id="@+id/txtview_time"
+                      style="@style/labelStyle2"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_alignParentRight="true" />
+              </RelativeLayout>
+
               <RelativeLayout
                   android:layout_width="match_parent"
                   android:layout_height="wrap_content">
@@ -90,24 +111,6 @@
                       android:layout_height="wrap_content" />
               </RelativeLayout>
 
-              <RelativeLayout
-                  android:layout_width="match_parent"
-                  android:layout_height="wrap_content">
-
-                  <TextView
-                      android:layout_alignParentLeft="true"
-                      style="@style/labelStyle"
-                      android:layout_width="wrap_content"
-                      android:layout_height="wrap_content"
-                      android:text="@string/time" />
-
-                  <TextView
-                      android:layout_alignParentRight="true"
-                      style="@style/labelStyle2"
-                      android:id="@+id/txtview_time"
-                      android:layout_width="wrap_content"
-                      android:layout_height="wrap_content" />
-              </RelativeLayout>
 
           </LinearLayout>
 

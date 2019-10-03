@@ -12,6 +12,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.vahitdurmus.nmeaproject.Adapters.RecyleLocationAdapter;
@@ -19,6 +20,7 @@ import com.example.vahitdurmus.nmeaproject.nmeamessage.GGA;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 
+import java.security.spec.ECField;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
@@ -27,12 +29,17 @@ import java.util.Map;
 public class MainActivity extends AppCompatActivity implements GoogleApiClient.ConnectionCallbacks,GoogleApiClient.OnConnectionFailedListener, GpsStatus.NmeaListener, com.google.android.gms.location.LocationListener {
 
     private static LocationTrack locationTrack;
-    TextView displayTextView;
     RecyclerView locationRecyleView;
     FloatingActionButton floatingActionButton;
     RecyleLocationAdapter recyleLocationAdapter;
     List<GGA> ggaList;
     LinearLayoutManager linearLayoutManager;
+
+    TextView textViewLatitude;
+    TextView textViewLongitude;
+    TextView textViewTime;
+    TextView textViewSatellites;
+    TextView textViewQuality;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,14 +47,20 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         setContentView(R.layout.activity_main);
 
         ggaList=new ArrayList<>();
-        linearLayoutManager=new LinearLayoutManager(this);
+        linearLayoutManager=new LinearLayoutManager(MainActivity.this, LinearLayoutManager.HORIZONTAL,false);
         recyleLocationAdapter=new RecyleLocationAdapter(this, ggaList);
-        displayTextView=findViewById(R.id.textview_display);
         floatingActionButton=findViewById(R.id.fabadd);
         locationRecyleView=findViewById(R.id.recylerview_location);
 
         locationRecyleView.setAdapter(recyleLocationAdapter);
         locationRecyleView.setLayoutManager(linearLayoutManager);
+
+        textViewLatitude=findViewById(R.id.txtview_latitude);
+        textViewLongitude=findViewById(R.id.txtview_longitude);
+        textViewQuality=findViewById(R.id.txtview_quality);
+        textViewSatellites=findViewById(R.id.txtview_satellitesnumber);
+        textViewTime=findViewById(R.id.txtview_time);
+
 
         locationTrack=new LocationTrack.Builder().setContext(this).buildGoogleApiClient().createLocationRequest(2000,1000).addNmeaStatusListener().connectGoogleApi().build();
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
@@ -67,10 +80,18 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
     public void onNmeaReceived(long l, String s) {
        try {
            locationTrack.setNmeaObject(s);
-           displayTextView.setText(locationTrack.get$GGA().toString());
+
+           textViewLatitude.setText(String.valueOf(locationTrack.get$GGA().getLatitude()));
+           textViewLongitude.setText(String.valueOf(locationTrack.get$GGA().getLongitude()));
+           textViewTime.setText(locationTrack.get$GGA().getTime());
+           textViewSatellites.setText(String.valueOf(locationTrack.get$GGA().getNumberOfSatellitesInUse()));
+           textViewQuality.setText(String.valueOf(locationTrack.get$GGA().getFixQuality()));
        }
        catch (NullPointerException e){
             e.printStackTrace();
+       }
+       catch (Exception e){
+
        }
     }
 
