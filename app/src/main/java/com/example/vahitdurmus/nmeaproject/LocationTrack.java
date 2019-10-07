@@ -38,7 +38,6 @@ public  class LocationTrack {
     private volatile GGA $GGA;
     private volatile GST $GST;
 
-
     public static class Builder{
         LocationTrack locationTrack;
         public  Builder(){
@@ -74,7 +73,6 @@ public  class LocationTrack {
             return locationTrack;
         }
     }
-
 
     private LocationTrack() {
     }

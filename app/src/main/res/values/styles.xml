@@ -10,7 +10,7 @@
 
     <style name="liveLabelStyle">
         <item name="android:layout_margin">5dp</item>
-        <item name="android:padding">2dp</item>
+        <item name="android:padding">4dp</item>
         <item name="android:background">@drawable/livelabel_background</item>
         <item name="android:textColor">#fff</item>
         <item name="android:height">30dp</item>
@@ -19,7 +19,7 @@
 
     <style name="labelStyle">
         <item name="android:layout_margin">5dp</item>
-        <item name="android:padding">2dp</item>
+        <item name="android:padding">4dp</item>
         <item name="android:background">@drawable/label_background</item>
         <item name="android:textColor">#fff</item>
         <item name="android:height">30dp</item>
@@ -27,7 +27,7 @@
     </style>
     <style name="labelStyle2">
         <item name="android:layout_margin">5dp</item>
-        <item name="android:padding">2dp</item>
+        <item name="android:padding">4dp</item>
         <item name="android:textColor">#fff</item>
         <item name="android:height">30dp</item>
         <item name="android:textAlignment">center</item>
@@ -35,7 +35,7 @@
 
     <style name="buttonStyle">
         <item name="android:layout_margin">5dp</item>
-        <item name="android:padding">2dp</item>
+        <item name="android:padding">4dp</item>
         <item name="android:background">@drawable/button_background</item>
         <item name="android:textColor">#fff</item>
         <item name="android:textAlignment">center</item>

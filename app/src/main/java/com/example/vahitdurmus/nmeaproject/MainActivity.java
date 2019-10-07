@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         setContentView(R.layout.activity_main);
 
         ggaList=new ArrayList<>();
-        linearLayoutManager=new LinearLayoutManager(MainActivity.this, LinearLayoutManager.HORIZONTAL,false);
+        linearLayoutManager=new LinearLayoutManager(MainActivity.this, LinearLayoutManager.VERTICAL,false);
         recyleLocationAdapter=new RecyleLocationAdapter(this, ggaList);
         floatingActionButton=findViewById(R.id.fabadd);
         locationRecyleView=findViewById(R.id.recylerview_location);
