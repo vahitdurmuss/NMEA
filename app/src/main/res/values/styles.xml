@@ -5,12 +5,11 @@
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/red</item>
+        <item name="colorAccent">@color/wallet_holo_blue_light</item>
     </style>
 
     <style name="liveLabelStyle">
-        <item name="android:layout_margin">5dp</item>
-        <item name="android:padding">4dp</item>
+        <item name="android:padding">5dp</item>
         <item name="android:background">@drawable/livelabel_background</item>
         <item name="android:textColor">#fff</item>
         <item name="android:height">30dp</item>
@@ -18,17 +17,15 @@
     </style>
 
     <style name="labelStyle">
-        <item name="android:layout_margin">5dp</item>
-        <item name="android:padding">4dp</item>
+        <item name="android:padding">5dp</item>
         <item name="android:background">@drawable/label_background</item>
         <item name="android:textColor">#fff</item>
         <item name="android:height">30dp</item>
         <item name="android:textAlignment">center</item>
     </style>
     <style name="labelStyle2">
-        <item name="android:layout_margin">5dp</item>
-        <item name="android:padding">4dp</item>
-        <item name="android:textColor">#fff</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:textColor">#080707</item>
         <item name="android:height">30dp</item>
         <item name="android:textAlignment">center</item>
     </style>
@@ -40,5 +37,14 @@
         <item name="android:textColor">#fff</item>
         <item name="android:textAlignment">center</item>
     </style>
+
+    <style name="buttonStyleLive">
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:padding">4dp</item>
+        <item name="android:background">@drawable/livebutton_background</item>
+        <item name="android:textColor">#fff</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
 
 </resources>

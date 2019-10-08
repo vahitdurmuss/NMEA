@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.vahitdurmus.nmeaproject.R;
@@ -32,7 +33,7 @@ public class RecyleLocationAdapter extends RecyclerView.Adapter<RecyleLocationAd
     }
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = layoutInflater.inflate(R.layout.layout_recylerrow, parent, false);
+        View view = layoutInflater.inflate(R.layout.recyler_row, parent, false);
         return new ViewHolder(view);
     }
     @Override
@@ -82,7 +83,7 @@ public class RecyleLocationAdapter extends RecyclerView.Adapter<RecyleLocationAd
         TextView qualityText;
         TextView satellitesNumberText;
         TextView timeText;
-        Button deleteButton;
+        ImageButton deleteButton;
 
 
         public ViewHolder(View itemView) {
@@ -92,7 +93,7 @@ public class RecyleLocationAdapter extends RecyclerView.Adapter<RecyleLocationAd
             qualityText = (TextView) itemView.findViewById(R.id.txtview_quality);
             satellitesNumberText = (TextView) itemView.findViewById(R.id.txtview_satellitesnumber);
             timeText=(TextView) itemView.findViewById(R.id.txtview_time);
-            deleteButton=(Button) itemView.findViewById(R.id.buttondelete);
+            deleteButton=(ImageButton) itemView.findViewById(R.id.buttondelete);
 
         }
     }

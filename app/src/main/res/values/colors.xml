@@ -6,4 +6,5 @@
     <color name="red">#dc5959</color>
     <color name="reddark">#FFCE3434</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="appmainColor">#ff33b5e5</color>
 </resources>

@@ -78,7 +78,7 @@ public class GGA {
     }
     public double getLongitude() {
         try {
-            double longdob= Double.valueOf(this.latitude);
+            double longdob= Double.valueOf(this.longitude);
             String longStringNmea= String.valueOf(longdob);
 
             String longdegree=longStringNmea.substring(0,2);

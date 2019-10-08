@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_margin="10dp"    >
+
+<TextView
+    android:id="@+id/textView"
+    style="@style/labelStyle"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="50dp"
+    android:layout_marginTop="16dp"
+    android:text="@string/longitude"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+<TextView
+    android:id="@+id/txtview_longitude"
+    style="@style/labelStyle2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="20dp"
+    android:layout_marginTop="16dp"
+    android:hint="32.33"
+    app:layout_constraintStart_toEndOf="@+id/textView"
+    app:layout_constraintTop_toTopOf="parent" />
+
+<TextView
+    android:id="@+id/textView3"
+    style="@style/labelStyle"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="50dp"
+    android:layout_marginTop="16dp"
+    android:text="@string/latitude"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+<TextView
+    android:id="@+id/txtview_latitude"
+    style="@style/labelStyle2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="20dp"
+    android:layout_marginTop="16dp"
+    android:hint="39.32"
+    app:layout_constraintStart_toEndOf="@+id/textView3"
+    app:layout_constraintTop_toBottomOf="@+id/txtview_longitude" />
+
+<TextView
+    android:id="@+id/textView5"
+    style="@style/labelStyle"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="50dp"
+    android:layout_marginTop="16dp"
+    android:text="@string/satellitesnumber"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+<TextView
+    android:id="@+id/txtview_satellitesnumber"
+    style="@style/labelStyle2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="20dp"
+    android:layout_marginTop="108dp"
+    android:hint="5"
+    app:layout_constraintStart_toEndOf="@+id/textView5"
+    app:layout_constraintTop_toTopOf="parent" />
+
+<TextView
+    android:id="@+id/textView7"
+    style="@style/labelStyle"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="50dp"
+    android:layout_marginTop="16dp"
+    android:text="@string/time"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+<TextView
+    android:id="@+id/txtview_time"
+    style="@style/labelStyle2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="20dp"
+    android:layout_marginTop="16dp"
+    android:hint="10:03:15"
+    app:layout_constraintStart_toEndOf="@+id/textView7"
+    app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+<TextView
+    android:id="@+id/textView9"
+    style="@style/labelStyle"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="65dp"
+    android:layout_marginTop="152dp"
+    android:text="@string/quality"
+    app:layout_constraintStart_toEndOf="@+id/txtview_time"
+    app:layout_constraintTop_toTopOf="parent" />
+
+<TextView
+    android:id="@+id/txtview_quality"
+    style="@style/labelStyle2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="8dp"
+    android:layout_marginStart="20dp"
+    android:layout_marginTop="152dp"
+    android:hint="1 (fixed)"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toEndOf="@+id/textView9"
+    app:layout_constraintTop_toTopOf="parent" />
+
+<ImageButton
+    android:id="@+id/buttondelete"
+    style="@style/buttonStyle"
+    android:layout_width="40dp"
+    android:layout_height="40dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:src="@drawable/ic_remove_circle_outline_black_24dp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+<LinearLayout
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="18dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="212dp"
+    android:background="@color/wallet_holo_blue_light"
+    android:orientation="horizontal"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"></LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>
