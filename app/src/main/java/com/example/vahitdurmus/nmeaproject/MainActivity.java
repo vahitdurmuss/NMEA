@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
     RecyleLocationAdapter recyleLocationAdapter;
     List<GGA> ggaList;
     LinearLayoutManager linearLayoutManager;
+    StringBuilder stringBuilderQuality=new StringBuilder();
 
     TextView textViewLatitude;
     TextView textViewLongitude;
@@ -49,10 +50,9 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
 
         getSupportActionBar().hide();
 
-
-
         ggaList=new ArrayList<>();
         linearLayoutManager=new LinearLayoutManager(MainActivity.this, LinearLayoutManager.VERTICAL,false);
+        linearLayoutManager.setSmoothScrollbarEnabled(true);
         recyleLocationAdapter=new RecyleLocationAdapter(this, ggaList);
         floatingActionButton=findViewById(R.id.fabadd);
         locationRecyleView=findViewById(R.id.recylerview_location);
@@ -85,19 +85,58 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
     public void onNmeaReceived(long l, String s) {
        try {
            locationTrack.setNmeaObject(s);
-
-           textViewLatitude.setText(String.valueOf(locationTrack.get$GGA().getLatitude()));
-           textViewLongitude.setText(String.valueOf(locationTrack.get$GGA().getLongitude()));
-           textViewTime.setText(locationTrack.get$GGA().getTime());
-           textViewSatellites.setText(String.valueOf(locationTrack.get$GGA().getNumberOfSatellitesInUse()));
-           textViewQuality.setText(String.valueOf(locationTrack.get$GGA().getFixQuality()));
-       }
-       catch (NullPointerException e){
-            e.printStackTrace();
+           showInfo();
        }
        catch (Exception e){
-
+           e.printStackTrace();
        }
+    }
+
+    private void showInfo() throws Exception{
+
+        textViewLatitude.setText(String.valueOf(locationTrack.get$GGA().getLatitude()));
+        textViewLongitude.setText(String.valueOf(locationTrack.get$GGA().getLongitude()));
+        textViewTime.setText(locationTrack.get$GGA().getTime());
+        textViewSatellites.setText(String.valueOf(locationTrack.get$GGA().getNumberOfSatellitesInUse()));
+
+        stringBuilderQuality=new StringBuilder();
+        settextViewQuality();
+    }
+    private void settextViewQuality() throws Exception{
+        switch (locationTrack.get$GGA().getFixQuality()){
+
+            case 0:
+                stringBuilderQuality.append("invalid");
+                break;
+            case 1:
+                stringBuilderQuality.append("GPS fix");
+                break;
+            case  2:
+                stringBuilderQuality.append("DGPS fix");
+                break;
+            case 3:
+                stringBuilderQuality.append("PPS fix");
+                break;
+            case 4:
+                stringBuilderQuality.append("Real Time Kinematic");
+                break;
+            case 5:
+                stringBuilderQuality.append("Float RTK");
+                break;
+            case  6:
+                stringBuilderQuality.append("estimated");
+                break;
+            case  7:
+                stringBuilderQuality.append("manual input mode");
+                break;
+            case  8:
+                stringBuilderQuality.append("simulation mode");
+                break;
+            default:
+        }
+
+        textViewQuality.setText(stringBuilderQuality.toString());
+
     }
 
     @Override

@@ -42,7 +42,7 @@ public class RecyleLocationAdapter extends RecyclerView.Adapter<RecyleLocationAd
         GGA gga = ggaList.get(position);
         holder.latitudeText.setText(String.valueOf(gga.getLatitude()));
         holder.longitudeText.setText(String.valueOf(gga.getLongitude()));
-        holder.qualityText.setText(String.valueOf(gga.getFixQuality()));
+        holder.qualityText.setText(getLocationQuality(gga.getFixQuality()));
         holder.satellitesNumberText.setText(String.valueOf(gga.getNumberOfSatellitesInUse()));
         holder.timeText.setText(gga.getTime());
         holder.deleteButton.setOnClickListener(new View.OnClickListener() {
@@ -94,7 +94,46 @@ public class RecyleLocationAdapter extends RecyclerView.Adapter<RecyleLocationAd
             satellitesNumberText = (TextView) itemView.findViewById(R.id.txtview_satellitesnumber);
             timeText=(TextView) itemView.findViewById(R.id.txtview_time);
             deleteButton=(ImageButton) itemView.findViewById(R.id.buttondelete);
-
         }
     }
+
+    private String getLocationQuality(int qualityCode){
+
+        StringBuilder stringBuilderQuality=new StringBuilder();
+        switch (qualityCode){
+
+            case 0:
+                stringBuilderQuality.append("invalid");
+                break;
+            case 1:
+                stringBuilderQuality.append("GPS fix");
+                break;
+            case  2:
+                stringBuilderQuality.append("DGPS fix");
+                break;
+            case 3:
+                stringBuilderQuality.append("PPS fix");
+                break;
+            case 4:
+                stringBuilderQuality.append("Real Time Kinematic");
+                break;
+            case 5:
+                stringBuilderQuality.append("Float RTK");
+                break;
+            case  6:
+                stringBuilderQuality.append("estimated");
+                break;
+            case  7:
+                stringBuilderQuality.append("manual input mode");
+                break;
+            case  8:
+                stringBuilderQuality.append("simulation mode");
+                break;
+            default:
+                stringBuilderQuality.append("none");
+                break;
+        }
+        return stringBuilderQuality.toString();
+    }
+
 }

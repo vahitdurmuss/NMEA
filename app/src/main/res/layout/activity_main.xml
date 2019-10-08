@@ -14,7 +14,7 @@
         android:layout_margin="10dp"
         android:elevation="3dp"
         android:id="@+id/cardview_display"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
 
@@ -118,7 +118,7 @@
                 style="@style/liveLabelStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="65dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="152dp"
                 android:text="@string/quality"
                 app:layout_constraintStart_toEndOf="@+id/txtview_time"
@@ -129,11 +129,9 @@
                 style="@style/labelStyle2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="152dp"
                 android:hint="1 (fixed)"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/textView9"
                 app:layout_constraintTop_toTopOf="parent" />
 
